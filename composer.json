@@ -1,0 +1,11 @@
+{
+    "name": "tanuki-form/headless-single-form-skeleton",
+    "type": "project",
+    "require": {
+        "php": ">=8.2",
+        "tanuki-form/tanuki-core": "^0.1.9",
+        "tanuki-form/tanuki-mail-sender-handler": "^0.1"
+    },
+    "minimum-stability": "beta",
+    "prefer-stable": true
+ }

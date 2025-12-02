@@ -1,0 +1,15 @@
+お問い合わせありがとうございます。
+
+[名前]
+{{ data.name }}
+
+[メールアドレス]
+{{ data.email }}
+
+[アンケート]
+{% for e in data.enquete %}
+{{ e }}
+{% endfor %}
+
+[メッセージ]
+{{ data.message }}
