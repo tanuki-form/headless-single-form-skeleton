@@ -3,7 +3,7 @@
     "type": "project",
     "require": {
         "php": ">=8.2",
-        "tanuki-form/tanuki-core": "^0.1.9",
+        "tanuki-form/tanuki-core": "^0.1",
         "tanuki-form/tanuki-mail-sender-handler": "^0.1"
     },
     "minimum-stability": "beta",
