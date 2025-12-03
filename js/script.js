@@ -43,7 +43,7 @@ form.querySelector(".send-button").addEventListener("click", async (e) => {
   const formData = getFormData();
 
   // Google reCAPTCHA
-  // formData.append("recaptchaToken", await getRecaptchaToken());
+  // formData.append("recaptcha-token", await getRecaptchaToken());
 
   const res = await API.send(formData);
   Demo.viewResults(res);

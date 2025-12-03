@@ -1,9 +1,9 @@
 <?php
 
 return [
+  ["name" => "recaptcha-token"],
+  ["name" => "cf-turnstile-response"],
   [
-    "name" => "recaptchaToken",
-  ], [
     "name" => "name",
     "label" => "Name",
     "validation" => [
