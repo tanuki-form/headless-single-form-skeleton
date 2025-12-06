@@ -1,5 +1,5 @@
 <?php
 
-function getOptions($name){
+function getConfig($name){
   return include __DIR__ . "/config/{$name}.php";
 }

@@ -12,21 +12,21 @@ function response($data){
 }
 
 $tanuki = new Tanuki();
-$form = $tanuki->createForm(getOptions("options"));
+$form = $tanuki->createForm(getConfig("options"));
 $form->bind($_POST ?? []);
 
 switch($_SERVER["REQUEST_METHOD"]){
   case "GET":
     switch($_GET["get"] ?? null){
       case "recaptcha":
-        $option = getOptions("pre-handlers/recaptcha");
+        $option = getConfig("pre-handlers/recaptcha");
         response([
           "siteKey" => $option["config"]["siteKey"]
         ]);
         break;
 
       case "turnstile":
-        $option = getOptions("pre-handlers/turnstile");
+        $option = getConfig("pre-handlers/turnstile");
         response([
           "siteKey" => $option["config"]["siteKey"]
         ]);

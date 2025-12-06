@@ -5,7 +5,7 @@ use Tanuki\PostHandler\MailSenderHandler;
 return [
   "handler" => MailSenderHandler::class,
   "config" => [
-    "smtp" => getOptions("smtp"),
+    "smtp" => getConfig("smtp"),
     "from" => "",
     "fromName" => "",
     "to" => "",
