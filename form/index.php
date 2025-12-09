@@ -12,25 +12,26 @@ function response($data){
 }
 
 $tanuki = new Tanuki();
-$form = $tanuki->createForm(getConfig("options"));
+$form = $tanuki->createForm(getConfig("config"));
 $form->bind($_POST ?? []);
 
 switch($_SERVER["REQUEST_METHOD"]){
   case "GET":
     switch($_GET["get"] ?? null){
-      case "recaptcha":
-        $option = getConfig("pre-handlers/recaptcha");
+      case "csrf-token":
         response([
-          "siteKey" => $option["config"]["siteKey"]
+          "token" => $form->helper->getCsrfToken()
         ]);
-        break;
+
+      case "recaptcha":
+        response([
+          "siteKey" => $form->helper->getRecaptchaSiteKey()
+        ]);
 
       case "turnstile":
-        $option = getConfig("pre-handlers/turnstile");
         response([
-          "siteKey" => $option["config"]["siteKey"]
+          "siteKey" => $form->helper->getTurnstileSiteKey()
         ]);
-        break;
     }
     break;
 

@@ -3,6 +3,7 @@
 return [
   "schema" => getConfig("schema"),
   "preHandlers" => [
+    getConfig("pre-handlers/csrf-guard"),
     //getConfig("pre-handlers/recaptcha"),
     //getConfig("pre-handlers/turnstile")
   ],

@@ -1,6 +1,7 @@
 <?php
 
 return [
+  ["name" => "csrf-token"],
   ["name" => "recaptcha-token"],
   ["name" => "cf-turnstile-response"],
   [

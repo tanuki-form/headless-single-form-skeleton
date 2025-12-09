@@ -42,6 +42,9 @@ form.querySelector(".send-button").addEventListener("click", async (e) => {
 
   const formData = getFormData();
 
+  // CSRF Guard
+  formData.append("csrf-token", await API.getCsrfToken());
+
   // Google reCAPTCHA
   // formData.append("recaptcha-token", await getRecaptchaToken());
 

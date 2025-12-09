@@ -29,6 +29,10 @@ export const API = {
     return await post(body);
   },
 
+  getCsrfToken: async () => {
+    return (await get("csrf-token")).token;
+  },
+
   getRecaptchaSiteKey: async () => {
     return (await get("recaptcha")).siteKey;
   },
