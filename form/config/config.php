@@ -11,5 +11,8 @@ return [
     getConfig("post-handlers/json-log"),
     //getConfig("post-handlers/send-admin"),
     //getConfig("post-handlers/reply")
+  ],
+  "helpers" => [
+    //Tanuki\HelperMethod\ResultViewer::class
   ]
 ];
