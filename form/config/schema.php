@@ -1,41 +1,40 @@
 <?php
 
 return [
-  ["name" => "csrf-token"],
-  ["name" => "recaptcha-token"],
-  ["name" => "cf-turnstile-response"],
-  [
-    "name" => "name",
+  "csrf-token" => [],
+  "recaptcha-token" => [],
+  "cf-turnstile-response" => [],
+  "name" => [
     "validation" => [
       "required" => true,
       "minLength" => 2
     ]
-  ], [
-    "name" => "email",
+  ],
+  "email" => [
     "validation" => [
       "required" => true,
       "email" => true
     ]
-  ], [
-    "name" => "email2",
+  ],
+  "email2" => [
     "validation" => [
       "required" => true,
       "email" => true,
       "matchField" => "email"
     ]
-  ], [
+  ],
+  "enquete" => [
     "type" => "array",
-    "name" => "enquete",
     "validation" => [
       "required" => true
     ]
-  ], [
-    "name" => "message",
+  ],
+  "message" => [
     "validation" => [
       "required" => true
     ]
-  ], [
-    "name" => "agreement",
+  ],
+  "agreement" => [
     "validation" => [
       "required" => true
     ]
